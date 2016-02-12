@@ -86,7 +86,7 @@ Puppet::Type.newtype(:rvm_gem) do
           end
 
           case is
-          when is.is_a?(Array)
+          when Array
             if is.include?(@latest)
               return true
             else
@@ -152,6 +152,6 @@ Puppet::Type.newtype(:rvm_gem) do
   newparam(:proxy_url) do
     desc "Proxy to use when downloading ruby installation"
     defaultto ""
-  end 
+  end
 
 end
